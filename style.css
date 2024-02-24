@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(2, 2, 118);
+    background-position: center;
+    background-size: cover;
+}
+
+.container .two-sec {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.two-sec .img-sec {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+.img-sec img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.two-sec .text-sec {
+    width: 550px;
+    max-width: 100%;
+    padding-bottom: 10%;
+    text-align: right;
+}
+
+.two-sec .text-sec h2 {
+    font-size: 6vmin;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+
+.two-sec .text-sec h1 {
+    font-size: 9vmin;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #8af2f8;
+    padding-bottom: 10px;
+}
+
+.two-sec .text-sec br {
+    width: 90%;
+    margin-left: 10%;
+}
+
+.two-sec .text-sec h3 {
+    font-size: 3vmin;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.two-sec .text-sec .countdown {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.two-sec .text-sec .countdown .main {
+    width: 150px;
+    max-width: 100%;
+    padding: 20px;
+    border: 2px solid #8af2f8;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 4vmin;
+    color: #fff;
+    background: linear-gradient(to bottom right, #3d7274, #091a4f, #0c1d50);
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.two-sec .text-sec .countdown .main::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 2px solid #85e9f1;
+    transform: rotate(-132deg);
+    position: absolute;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    top: auto;
+    right: -14px;
+    bottom: -15px;
+    background: rgb(2, 2, 124);
+}
+
+.button {
+    color: wheat;
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    position: relative;
+    letter-spacing: 1px;
+    padding: 10px 35px;
+    border: 1px solid #85e9f1;
+    background: linear-gradient(to bottom right, #3d7274, #091a4f, #0c1d50);
+}
+
+.button::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #85e9f1;
+    transform: rotate(-132deg);
+    position: absolute;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    top: auto;
+    right: -10px;
+    bottom: -12px;
+    background: rgb(2, 2, 124);
+}
+
+a {
+    position: relative;
+    padding: 10px 35px;
+    margin: 30px 15px;
+    color: #21ebff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+a:hover {
+    background: #21ebff;
+    color: #fff;
+    box-shadow: 0 0 50px rgb(2, 2, 124);
+    transition-delay: 0.5s;
+}
+
+/* Responsive Selection */
+@media screen and (max-width: 950px) {
+    .container {
+        height: 150vh;
+    }
+    .container .two-sec {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container .two-sec .countdown .main {
+        width: 100px;
+        max-width: 100%;
+        font-size: 3vmin;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        height: 300vh;
+    }
+    .container .two-sec {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .two-sec .text-sec .countdown {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .two-sec .text-sec .countdown .main {
+        margin: 10px;
+    }
+}

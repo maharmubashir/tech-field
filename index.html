@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="two-sec">
+        <div class="img-sec">
+          <img src="download.jpeg" alt="" />
+        </div>
+        <div class="text-sec">
+          <h2>Innovation of</h2>
+          <h1>Technology</h1>
+          <br />
+          <h3>Amazing Event</h3>
+          <div class="countdown">
+            <div class="main">
+              <div id="days">00</div>
+              <span>Days</span>
+            </div>
+            <div class="main">
+              <div id="hours">00</div>
+              <span>Hours</span>
+            </div>
+            <div class="main">
+              <div id="minutes">00</div>
+              <span>Minutes</span>
+            </div>
+            <div class="main">
+              <div id="seconds">00</div>
+              <span>Seconds</span>
+            </div>
+          </div>
+          <div class="btns">
+            <a href="#" class="button">Login</a>
+            <a href="#" class="button">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var countdownDate = new Date("Novbb04 , 2023 00:00:00").getTime();
+
+      var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countdownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerHTML = days;
+        document.getElementById('hours').innerHTML = hours;
+        document.getElementById('minutes').innerHTML = minutes;
+        document.getElementById('seconds').innerHTML = seconds;
+      }, 1000);
+    </script>
+  </body>
+</html>
